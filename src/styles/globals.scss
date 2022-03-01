@@ -4,4 +4,13 @@
   padding: 0;
 }
 
-// TODO
+body {
+  background-color: rgba(40, 44, 52, 0.83);
+  font-family: Inter, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}

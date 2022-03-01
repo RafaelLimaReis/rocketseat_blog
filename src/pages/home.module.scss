@@ -1,1 +1,77 @@
-// TODO
+@import '../styles/variables.scss';
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+
+  .post {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &:last-child {
+      margin-bottom: 4rem;
+    }
+  }
+
+  a.post_link {
+    display: block;
+
+    .title {
+      display: block;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 2.125rem;
+      letter-spacing: -0.5px;
+      color: $heading;
+
+      margin-bottom: 0.5rem
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.375rem;
+      letter-spacing: 0em;
+      color: $body;
+
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .info {
+    display: flex;
+
+    time, span.author {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.0625rem;
+      letter-spacing: 0em;
+      color: $info;
+
+      display: flex;
+      align-items: center;
+    }
+
+    span.author {
+      margin-left: 1.5rem;
+    }
+
+    .icon_calendar, .icon_author {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .buttonPage {
+    cursor: pointer;
+    color: $highlight;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+}
