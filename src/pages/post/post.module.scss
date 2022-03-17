@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .contentImage {
   max-height: 400px;
   overflow: hidden;
@@ -7,4 +9,48 @@
 
 .image {
   width: 100%;
+}
+
+.container {
+  max-width: 721px;
+  display: block;
+  margin: 80px auto;
+
+  .container_info {
+    margin-bottom: 66px;
+    margin-top: 25px;
+    display: flex;
+  }
+
+  .container_info span {
+    margin-left: 24px;
+  }
+
+  .container_info span, .container_info time {
+    display: flex;
+    color: $info;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+
+    .icon_calendar, .icon_author, .icon_time {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      color: $info;
+    }
+  }
+
+  h1 {
+    color: $heading;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -0.5px;
+  }
+
+
 }

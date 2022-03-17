@@ -6,6 +6,9 @@ import { format } from 'date-fns';
 import PtBR from 'date-fns/locale/pt-BR';
 import { useRouter } from 'next/router';
 import { RichText } from 'prismic-dom';
+import { FiCalendar } from 'react-icons/fi';
+import { BiTimeFive } from 'react-icons/bi';
+import { BsPerson } from 'react-icons/bs';
 import { getPrismicClient } from '../../services/prismic';
 
 import commonStyles from '../../styles/common.module.scss';
@@ -54,12 +57,20 @@ export default function Post({ post }: PostProps): JSX.Element {
           className={styles.image}
         />
       </div>
-      <main>
+      <main className={styles.container}>
         <h1>{post.data.title}</h1>
-        <span>
-          <time>{formatDate(post.first_publication_date)}</time>
-          <span>{post.data.author}</span>
-          <span>4 min</span>
+        <span className={styles.container_info}>
+          <time>
+            <FiCalendar className={styles.icon_calendar} />
+            {formatDate(post.first_publication_date)}
+          </time>
+          <span>
+            <BsPerson className={styles.icon_author} />
+            {post.data.author}
+          </span>
+          <span>
+            <BiTimeFive className={styles.icon_time} />4 min
+          </span>
         </span>
         <section>
           {post.data.content.map(content => (
