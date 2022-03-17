@@ -1,1 +1,10 @@
-// TODO
+.contentImage {
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+}

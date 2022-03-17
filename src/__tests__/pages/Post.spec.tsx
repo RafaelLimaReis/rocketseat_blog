@@ -241,7 +241,7 @@ describe('Post', () => {
     const response = (await getStaticProps(
       getStaticPropsContext
     )) as GetStaticPropsResult;
-
+    console.log(response.props.post);
     expect(response.props.post).toEqual(expect.objectContaining(postReturn));
   });
 
